@@ -4,7 +4,9 @@
   "description": "Using Javascript and Express and Node.js a sudokuSolver",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "repository": {
     "type": "git",
