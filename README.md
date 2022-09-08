@@ -1,6 +1,8 @@
 # Sudoku Solver
 Using Javascript and Express and Node.js a sudokuSolver
 
+#Requires SubScription to Rapid API KEY. Otherwise it won't Work (Key has expired becasue of excess charging)
+
 # sudokusolver
 
 - Add a valid sudoku that has 0 in place of empty spaces
