@@ -30,31 +30,29 @@ const joinValues  = () =>{
 };
 
 
-
+// import axios from "axios";
 
 
 let solve =()=>{
-    const axios = require('axios');
+    // let axios = require('axios');
+    joinValues();
+    const axios = require("axios");
 
-    const options = {
-    method: 'POST',
-    url: 'https://solve-sudoku.p.rapidapi.com/',
-    headers: {
-        'content-type': 'application/json',
-        'X-RapidAPI-Key': '7099937ac1msha47212a0d13b32ep1b41e9jsn27a0f7afd929',
-        'X-RapidAPI-Host': 'solve-sudoku.p.rapidapi.com'
-    },
-        data: 
-        {
-            "puzzle":"2.............62....1....7...6..8...3...9...7...6..4...4....8....52.............3"
-        }
-    };
+                const options = {
+                method: 'POST',
+                url: 'https://solve-sudoku.p.rapidapi.com/',
+                headers: {
+                    'content-type': 'application/json',
+                    'X-RapidAPI-Key': process.env.RAPID_API_KEY,
+                    'X-RapidAPI-Host': 'solve-sudoku.p.rapidapi.com'
+                },
+                data: '{"puzzle":"2.............62....1....7...6..8...3...9...7...6..4...4....8....52.............3"}'
+                };
 
-    axios.request(options).
-    then((response)=> {
-        console.log(response.data);
-    }).catch((error)=>{
-        console.error(error);
-    });
+                axios.request(options).then(function (response) {
+                    console.log(response.data);
+                }).catch(function (error) {
+                    console.error(error);
+                });
 };
 solveButton.addEventListener("click", solve);
